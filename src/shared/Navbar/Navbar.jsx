@@ -1,9 +1,12 @@
 import { FaCartPlus } from "react-icons/fa";
 import { FcLike } from "react-icons/fc";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
+
 const Navbar = () => {
+  const location = useLocation()
+  const homePage = location.pathname ==='/'
   const links = (
     <>
     <li>
@@ -35,7 +38,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="navbar ">
+      <div className={`navbar ${homePage? 'bg-[#9538E2] text-white' : 'bg-white'}`} >
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -67,11 +70,11 @@ const Navbar = () => {
           <ul className="flex px-1 gap-2">{links}</ul>
         </div>
         <div className="navbar-end gap-x-2">
-          <NavLink className="btn">
-            <FaCartPlus />
+          <NavLink className="btn btn-md rounded-full bg-white">
+            <FaCartPlus className="text-sm" />
           </NavLink>
-          <NavLink className="btn">
-            <FcLike />
+          <NavLink className="btn btn-md rounded-full bg-white">
+            <FcLike className="text-sm" />
           </NavLink>
         </div>
       </div>
