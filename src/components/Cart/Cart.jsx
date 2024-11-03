@@ -1,9 +1,11 @@
-
+import { FaCartPlus } from "react-icons/fa";
 
 const Cart = () => {
   return (
-    <div>Cart</div>
-  )
-}
+    <div>
+      <FaCartPlus />
+    </div>
+  );
+};
 
-export default Cart
+export default Cart;

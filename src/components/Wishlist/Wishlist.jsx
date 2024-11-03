@@ -1,9 +1,11 @@
-
+import { FcLike } from "react-icons/fc";
 
 const Wishlist = () => {
   return (
-    <div>Wishlist</div>
-  )
-}
+    <div>
+      <FcLike />
+    </div>
+  );
+};
 
-export default Wishlist
+export default Wishlist;

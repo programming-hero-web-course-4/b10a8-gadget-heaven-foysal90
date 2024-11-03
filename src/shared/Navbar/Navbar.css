@@ -1,0 +1,6 @@
+.active-link {
+  background-color: #3498db; /* Set your desired active background color */
+  color: white; /* Optional: Set the text color */
+  border-radius: 4px; /* Optional: Add border-radius for styling */
+  padding: 0.5rem 1rem; /* Optional: Adjust padding for a nicer appearance */
+}
