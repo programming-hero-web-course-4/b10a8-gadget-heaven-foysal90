@@ -1,8 +1,8 @@
 [
   {
     "id": "P1001",
-    "title": "Smartphone X20",
-    "image": "https://example.com/images/smartphone_x20.jpg",
+    "title": "Galaxy S24 Ultra",
+    "image": "https://i.ibb.co/jJNpDmC/samsung.webp",
     "category": "Phones",
     "price": 899,
     "description": "A high-end smartphone with an edge-to-edge display and advanced features.",
@@ -13,7 +13,7 @@
       "5G Connectivity",
       "4000mAh Battery"
     ],
-    "availability": true,
+    "availability": "In Stock",
     "rating": 4.5
   },
   {
@@ -29,7 +29,7 @@
       "IPX4 Water Resistance",
       "Bluetooth 5.2"
     ],
-    "availability": true,
+    "availability": "In Stock",
     "rating": 4.8
   },
   {
@@ -46,15 +46,15 @@
       "512GB SSD",
       "NVIDIA GeForce GTX 1660"
     ],
-    "availability": false,
+    "availability": "OUT of Stock",
     "rating": 4.2
   },
   {
     "id": "P1004",
-    "title": "4K Ultra HD Smart TV",
-    "image": "https://example.com/images/4k_smart_tv.jpg",
+    "title": "Iphone 16 pro max",
+    "image": "https://i.ibb.co/YL3Mc5T/16promax.webp",
     "category": "Iphone",
-    "price": 799,
+    "price": 1199,
     "description": "A stunning 4K Ultra HD smart TV with HDR and streaming apps built-in.",
     "specification": [
       "55-inch 4K UHD Display",
@@ -62,7 +62,7 @@
       "Smart TV with Streaming Apps",
       "Voice Control Enabled"
     ],
-    "availability": true,
+    "availability": "In Stock",
     "rating": 4.6
   },
   {
@@ -78,7 +78,7 @@
       "Water-resistant (IPX5)",
       "Bluetooth 5.0"
     ],
-    "availability": true,
+    "availability": "In Stock",
     "rating": 4.3
   },
   {
@@ -94,7 +94,7 @@
       "Water Resistant",
       "Multiple Sports Modes"
     ],
-    "availability": true,
+    "availability": "In Stock",
     "rating": 4.7
   },
   {
@@ -110,13 +110,13 @@
       "Aluminum Build",
       "Heat Dissipation"
     ],
-    "availability": true,
+    "availability": "In Stock",
     "rating": 4.4
   },
   {
     "id": "P1008",
     "title": "Digital Camera Z300",
-    "image": "https://example.com/images/digital_camera_z300.jpg",
+    "image": "https://i.ibb.co/YL3Mc5T/16promax.webp",
     "category": "MacBook",
     "price": 499,
     "description": "High-resolution digital camera for stunning photography.",
@@ -126,7 +126,7 @@
       "Wi-Fi Connectivity",
       "3-inch LCD Screen"
     ],
-    "availability": false,
+    "availability": "out of Stock",
     "rating": 4.5
   },
   {
@@ -142,7 +142,7 @@
       "Wi-Fi and Zigbee Connectivity",
       "Mobile App Control"
     ],
-    "availability": true,
+    "availability": "In Stock",
     "rating": 4.6
   }
 ]
