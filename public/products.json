@@ -18,8 +18,8 @@
   },
   {
     "id": "P1002",
-    "title": "Wireless Earbuds Pro",
-    "image": "https://example.com/images/wireless_earbuds_pro.jpg",
+    "title": "AirPod Pro",
+    "image": "https://i.ibb.co/3B1n5KZ/airpod-pro.jpg",
     "category": "Accessories",
     "price": 199,
     "description": "Noise-cancelling wireless earbuds with a long-lasting battery.",
@@ -34,11 +34,11 @@
   },
   {
     "id": "P1003",
-    "title": "Gaming Laptop G15",
-    "image": "https://example.com/images/gaming_laptop_g15.jpg",
+    "title": "HP Laptop EliteBook",
+    "image": "https://i.ibb.co/zh4Y6WP/hp.jpg",
     "category": "Laptops",
     "price": 1499,
-    "description": "High-performance gaming laptop with a dedicated GPU and RGB lighting.",
+    "description": "High-performance laptop designed for professionals, featuring robust security and management tools.",
     "specification": [
       "15.6-inch Full HD Display",
       "Intel Core i7 Processor",
@@ -46,37 +46,39 @@
       "512GB SSD",
       "NVIDIA GeForce GTX 1660"
     ],
-    "availability": "OUT of Stock",
+    "availability": "Out of Stock",
     "rating": 4.2
   },
   {
     "id": "P1004",
-    "title": "Iphone 16 pro max",
+    "title": "iPhone 16 Pro Max",
     "image": "https://i.ibb.co/YL3Mc5T/16promax.webp",
-    "category": "Iphone",
+    "category": "iPhone",
     "price": 1199,
-    "description": "A stunning 4K Ultra HD smart TV with HDR and streaming apps built-in.",
+    "description": "A premium smartphone with a powerful camera system, exceptional performance, and a vibrant display.",
     "specification": [
-      "55-inch 4K UHD Display",
-      "HDR10+",
-      "Smart TV with Streaming Apps",
-      "Voice Control Enabled"
+      "6.7-inch Super Retina XDR Display",
+      "A16 Bionic Chip",
+      "48MP Main Camera",
+      "5G Capable",
+      "Dynamic Island"
     ],
     "availability": "In Stock",
     "rating": 4.6
   },
   {
     "id": "P1005",
-    "title": "Bluetooth Speaker S50",
-    "image": "https://example.com/images/bluetooth_speaker_s50.jpg",
+    "title": "MacBook Pro",
+    "image": "https://i.ibb.co/x20hFVc/macbook.jpg",
     "category": "MacBook",
-    "price": 99,
-    "description": "Portable Bluetooth speaker with powerful sound and deep bass.",
+    "price": 1299,
+    "description": "High-performance laptop with an Apple M1 chip, featuring a stunning Retina display and all-day battery life.",
     "specification": [
-      "10W Output Power",
-      "12-hour Playtime",
-      "Water-resistant (IPX5)",
-      "Bluetooth 5.0"
+      "13-inch Retina Display",
+      "Apple M1 Chip",
+      "8GB RAM",
+      "256GB SSD",
+      "Up to 20 hours battery life"
     ],
     "availability": "In Stock",
     "rating": 4.3
@@ -84,10 +86,10 @@
   {
     "id": "P1006",
     "title": "Smartwatch Series 6",
-    "image": "https://example.com/images/smartwatch_series6.jpg",
+    "image": "https://i.ibb.co/YLbB5X0/samwatch.jpg",
     "category": "SmartWatches",
     "price": 299,
-    "description": "Feature-packed smartwatch with health monitoring and fitness tracking.",
+    "description": "Feature-packed smartwatch with advanced health monitoring and fitness tracking capabilities.",
     "specification": [
       "Heart Rate Monitor",
       "GPS Tracking",
@@ -100,10 +102,10 @@
   {
     "id": "P1007",
     "title": "Laptop Stand Pro",
-    "image": "https://example.com/images/laptop_stand_pro.jpg",
+    "image": "https://i.ibb.co/zb23MLf/stand.jpg",
     "category": "Accessories",
     "price": 49,
-    "description": "Ergonomic laptop stand for comfortable viewing and typing.",
+    "description": "Ergonomic laptop stand designed for comfortable viewing and typing to enhance posture.",
     "specification": [
       "Adjustable Height",
       "Foldable Design",
@@ -115,32 +117,33 @@
   },
   {
     "id": "P1008",
-    "title": "Digital Camera Z300",
-    "image": "https://i.ibb.co/YL3Mc5T/16promax.webp",
+    "title": "MacBook Air 3",
+    "image": "https://i.ibb.co/55XkkHW/air.jpg",
     "category": "MacBook",
-    "price": 499,
-    "description": "High-resolution digital camera for stunning photography.",
+    "price": 999,
+    "description": "Ultra-thin and lightweight laptop with impressive performance and long battery life.",
     "specification": [
-      "24MP Sensor",
-      "4K Video Recording",
-      "Wi-Fi Connectivity",
-      "3-inch LCD Screen"
+      "13-inch Retina Display",
+      "Apple M1 Chip",
+      "8GB RAM",
+      "256GB SSD",
+      "Up to 18 hours battery life"
     ],
-    "availability": "out of Stock",
+    "availability": "Out of Stock",
     "rating": 4.5
   },
   {
     "id": "P1009",
-    "title": "Home Assistant Hub",
-    "image": "https://example.com/images/home_assistant_hub.jpg",
+    "title": "Apple Watch Series 9",
+    "image": "https://i.ibb.co/VJ0MXGS/applewatch.jpg",
     "category": "SmartWatches",
     "price": 149,
-    "description": "Smart home hub for controlling all your devices from one place.",
+    "description": "Smartwatch with comprehensive health tracking features, customizable watch faces, and notifications.",
     "specification": [
-      "Voice Control",
-      "Compatible with Alexa and Google Home",
-      "Wi-Fi and Zigbee Connectivity",
-      "Mobile App Control"
+      "Heart Rate Monitoring",
+      "GPS and Compass",
+      "Water Resistant",
+      "Multiple Workout Modes"
     ],
     "availability": "In Stock",
     "rating": 4.6
