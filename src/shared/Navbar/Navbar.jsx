@@ -1,6 +1,6 @@
 import { FaCartPlus } from "react-icons/fa";
 import { FcLike } from "react-icons/fc";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -61,7 +61,7 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">GadgetHive</a>
+          <Link to='/' className="btn btn-ghost text-xl">GadgetHive</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="flex px-1 gap-2">{links}</ul>
