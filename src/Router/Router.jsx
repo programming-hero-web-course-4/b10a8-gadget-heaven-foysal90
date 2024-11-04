@@ -7,6 +7,7 @@ import Dashboard from "../components/Dashboard/Dashboard";
 import Cart from "../components/Cart/Cart";
 import Wishlist from "../components/Wishlist/Wishlist";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
+import AboutUs from "../components/AboutUs/AboutUs";
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const Router = () => {
         {
           path: "/statistics",
           element: <Statistics />,
+        },
+        {
+          path: "/about",
+          element: <AboutUs />,
         },
         {
           path: "cart",

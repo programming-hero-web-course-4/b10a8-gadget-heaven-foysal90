@@ -5,13 +5,12 @@ import { FcLikePlaceholder } from "react-icons/fc";
 
 import { useCart } from "../../utility/CartContext";
 import { addToCart, addToWishList } from "../../utility/AddToDb";
-// Import the context
 
 const ProductDetails = () => {
   const { id } = useParams();
   const productData = useLoaderData();
   const product = productData.find((product) => product.id === id);
-  const { setCartItemsCount } = useCart(); // Get context function to update cart count
+  const { setCartItemsCount, setWishlistCount } = useCart(); // Get context functions to update counts
 
   if (!product) {
     return <div>Product not found</div>;
@@ -30,17 +29,17 @@ const ProductDetails = () => {
 
   const handleAddCart = (id) => {
     addToCart(id, (newCount) => {
-      // Update the cart count in context
-      setCartItemsCount(newCount); 
+      setCartItemsCount(newCount);
     });
   };
 
   const handleWishList = (id) => {
     addToWishList(id);
+    setWishlistCount((prev) => prev + 1); // Increment wishlist count after adding an item
   };
 
   return (
-    <div className="relative bg-[#9538E2] h-96 flex items-center justify-center mb-96 ">
+    <div className="relative bg-[#9538E2] h-96 flex items-center justify-center mb-96">
       <div className="text-center text-white z-10 space-y-4 px-4 -mt-60">
         <h1 className="text-2xl font-bold">Product Details</h1>
         <span className="block text-lg">
@@ -49,13 +48,13 @@ const ProductDetails = () => {
         </span>
       </div>
 
-      <div className="absolute top-28 opacity-85">
-        <div className="bg-gray-100 text-black">
+      <div className="absolute top-28">
+        <div className="bg-white text-black border rounded-xl mt-7 ">
           <div className="flex flex-col lg:flex-row w-full p-5">
             <img
               src={image}
               alt={title}
-              className="w-4/5 h-auto rounded-lg shadow-2xl"
+              className="w-4/5 h-auto rounded-lg"
             />
             <div className="flex flex-col justify-center p-5">
               <h1 className="text-xl font-bold">{title}</h1>
@@ -117,7 +116,7 @@ const ProductDetails = () => {
                   >
                     Add To Cart
                   </button>
-                  <BsCartCheckFill className="absolute top-7 left-[108px]" />
+                  <BsCartCheckFill className="absolute top-7 left-[108px] text-white" />
                 </div>
                 <button
                   onClick={() => handleWishList(id)}
@@ -125,6 +124,7 @@ const ProductDetails = () => {
                 >
                   <FcLikePlaceholder />
                 </button>
+               
               </div>
             </div>
           </div>

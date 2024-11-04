@@ -2,14 +2,13 @@ import { FaCartPlus } from "react-icons/fa";
 import { FcLike } from "react-icons/fc";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import "./Navbar.css";
-import { useEffect, useState } from "react";
-import { getCart } from "../../utility/AddToDb";
+
 import { useCart } from "../../utility/CartContext";
 
 const Navbar = () => {
   const location = useLocation();
   const homePage = location.pathname === "/";
-  const { cartItemsCount } = useCart();
+  const { cartItemsCount, wishlistCount } = useCart(); // Destructure wishlistCount from context
 
   const links = (
     <>
@@ -35,6 +34,14 @@ const Navbar = () => {
           className={({ isActive }) => (isActive ? "active-link" : "")}
         >
           Dashboard
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          About us
         </NavLink>
       </li>
     </>
@@ -67,12 +74,12 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="gap-5  dropdown-content  rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="gap-5 text-white  bg-purple-600 dropdown-content rounded-box z-20 mt-3 w-52 p-2 shadow"
             >
               {links}
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost text-xl">
+          <Link to="/" className="btn btn-ghost  text-xl">
             GadgetHive
           </Link>
         </div>
@@ -86,8 +93,11 @@ const Navbar = () => {
               {cartItemsCount}
             </span>
           </NavLink>
-          <NavLink className="btn btn-md rounded-full bg-white">
+          <NavLink className="btn btn-md rounded-full bg-white relative">
             <FcLike className="text-sm" />
+            <span className="absolute top-[-5px] right-[-10px] bg-red-800 text-white rounded-full w-5 h-5 flex items-center justify-center font-extrabold text-xs">
+              {wishlistCount} 
+            </span>
           </NavLink>
         </div>
       </div>
