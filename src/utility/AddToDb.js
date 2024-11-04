@@ -8,7 +8,7 @@ const getCart = () => {
   } else return [];
 };
 
-const addToCart = (id) => {
+const addToCart = (id, callback) => {
   const storedCart = getCart();
   if (storedCart.includes(id)) {
     console.log(id, "already exists");
@@ -17,10 +17,15 @@ const addToCart = (id) => {
     const storedCartStr = JSON.stringify(storedCart);
     localStorage.setItem("cart-item", storedCartStr);
     toast("item Added to cart");
+
+    
+    if (callback) {
+      callback(storedCart.length); 
+    }
   }
 };
 
-//wish list
+// Wish list functions remain unchanged
 const getWishList = () => {
   const storedListStr = localStorage.getItem("wish-list");
   if (storedListStr) {
@@ -34,7 +39,7 @@ const addToWishList = (id) => {
 
   if (cartList.includes(id)) {
     toast.error(
-      "This item is already cart and cannot be added to the wishlist."
+      "This item is already in the cart and cannot be added to the wishlist."
     );
     return;
   }
@@ -45,7 +50,7 @@ const addToWishList = (id) => {
     storedList.push(id);
     const storedListStr = JSON.stringify(storedList);
     localStorage.setItem("wish-list", storedListStr);
-    toast("item Added");
+    toast("Item Added to wishlist");
   }
 };
 

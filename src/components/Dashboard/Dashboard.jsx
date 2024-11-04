@@ -9,15 +9,16 @@ const Dashboard = () => {
   const [wishList, setWishList] = useState([]);
   const [showCart, setShowCart] = useState(false);
   const [showWishlist, setShowWishlist] = useState(false);
+  const [sort, setSort] = useState("");
 
   const toggleCart = () => {
     setShowCart((prevShowCart) => !prevShowCart);
-    setShowWishlist(false); // Hide wishlist when cart is shown
+    setShowWishlist(false); 
   };
 
   const toggleWishlist = () => {
     setShowWishlist((prevShowWishlist) => !prevShowWishlist);
-    setShowCart(false); // Hide cart when wishlist is shown
+    setShowCart(false);
   };
 
   //CART ITEMS
@@ -29,7 +30,7 @@ const Dashboard = () => {
       storedCartListInt.includes(item.id)
     );
     setCartItem(cartList);
-  }, []);
+  }, [allItemsData]);
   //wish list
   useEffect(() => {
     const storeWishList = getWishList();
@@ -39,9 +40,18 @@ const Dashboard = () => {
       storeWishListInt.includes(item.id)
     );
     setWishList(wishReadList);
-  }, []);
+  }, [allItemsData]);
   // Calculate total cost for cart items
   const totalCost = cartItem.reduce((total, item) => total + item.price, 0);
+
+  //sorting by price
+  const handleSort = (sortType) => {
+    setSort(sortType);
+    if (sortType === "price") {
+      const sortedList = [...cartItem].sort((a, b) => b.price - a.price);
+      setCartItem(sortedList);
+    }
+  };
 
   return (
     <div>
@@ -75,8 +85,10 @@ const Dashboard = () => {
           <div className="flex justify-between items-center">
             <h1 className="font-bold text-black">Cart</h1>
             <div className="flex items-center gap-5 mb-2">
-              <p className="font-bold text-black">Total cost: ${totalCost.toFixed(2)}</p>
-              <button className="btn btn-sm">Sort by:</button>
+              <p className="font-bold text-black">
+                Total cost: ${totalCost.toFixed(2)}
+              </p>
+              <button onClick={() => handleSort("price")} className="btn btn-sm btn-outline border-2 text-purple-800 border-purple-700 ">Sort by Price</button>
               <button className="btn btn-sm">Purchase</button>
             </div>
           </div>
