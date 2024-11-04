@@ -31,11 +31,11 @@ const Router = () => {
           path: "/productdetails/:id",
           element: <ProductDetails />,
           loader: () => fetch("/products.json"),
-          
         },
         {
           path: "/dashboard",
           element: <Dashboard />,
+          loader: () => fetch("/products.json"),
         },
         {
           path: "/wishlist",
